@@ -51,3 +51,6 @@ logfile <%= @logfile -%>
 -I <%= @item_size %>
 <% end -%>
 
+<% if @replication_partner -%>
+-x <%= @replication_partner %>
+<% end -%>

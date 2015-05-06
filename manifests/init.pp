@@ -1,18 +1,19 @@
 class memcached(
-  $package_ensure  = 'present',
-  $logfile         = '/var/log/memcached.log',
-  $max_memory      = false,
-  $item_size       = false,
-  $lock_memory     = false,
-  $listen_ip       = '0.0.0.0',
-  $tcp_port        = 11211,
-  $udp_port        = 11211,
-  $user            = $::memcached::params::user,
-  $max_connections = '8192',
-  $verbosity       = undef,
-  $unix_socket     = undef,
-  $install_dev     = false,
-  $processorcount  = $::processorcount
+  $package_ensure      = 'present',
+  $logfile             = '/var/log/memcached.log',
+  $max_memory          = false,
+  $item_size           = false,
+  $lock_memory         = false,
+  $listen_ip           = '0.0.0.0',
+  $tcp_port            = 11211,
+  $udp_port            = 11211,
+  $user                = $::memcached::params::user,
+  $max_connections     = '8192',
+  $verbosity           = undef,
+  $unix_socket         = undef,
+  $install_dev         = false,
+  $processorcount      = $::processorcount,
+  $replication_partner = false,
 ) inherits memcached::params {
 
   if $package_ensure == 'absent' {
