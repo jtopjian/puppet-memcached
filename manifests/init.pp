@@ -4,7 +4,7 @@ class memcached(
   $max_memory          = false,
   $item_size           = false,
   $lock_memory         = false,
-  $listen_ip           = '0.0.0.0',
+  $listen_ip           = false,
   $tcp_port            = 11211,
   $udp_port            = 11211,
   $user                = $::memcached::params::user,

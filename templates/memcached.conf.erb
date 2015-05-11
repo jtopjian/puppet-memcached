@@ -28,7 +28,9 @@ logfile <%= @logfile -%>
 -s <%= @unix_socket %>
 <% else -%>
 # IP to listen on
+<% if @listen_ip -%>
 -l <%= @listen_ip %>
+<% end -%>
 
 # TCP port to listen on
 -p <%= @tcp_port %>
