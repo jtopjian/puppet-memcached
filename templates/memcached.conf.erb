@@ -54,5 +54,7 @@ logfile <%= @logfile -%>
 <% end -%>
 
 <% if @replication_partner -%>
--x <%= @replication_partner %>
-<% end -%>
+<% @replication_partner.each do |partner| %>
+-x <%= partner %>
+<% end %>
+<% end %>
